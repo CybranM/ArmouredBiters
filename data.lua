@@ -3,6 +3,7 @@ local setting_utils = require("setting-utils")
 local sounds = require("__base__.prototypes.entity.sounds")
 local ab_enemy_autoplace = require("armoured-autoplace")
 local enemy_autoplace = require("__base__.prototypes.entity.enemy-autoplace-utils")
+local biter_ai_settings = require("__base__.prototypes.entity.biter-ai-settings")
 
 small_armoured_scale = 0.5
 small_armoured_tint1 = settings.startup["ab-small-armoured-biter-color-primary"].value
