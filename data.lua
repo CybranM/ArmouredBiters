@@ -78,6 +78,10 @@ local function make_biter_area_damage(damage, radius)
     }
 end
 
+local function setresistancevalue(initres)
+    return math.floor(-100/math.pow(1.25,initres/20)+100)
+end
+
 data:extend(
     {
         {
@@ -99,22 +103,22 @@ data:extend(
                 {
                     type = "physical",
                     decrease = 1 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances"),
-                    percent = 10 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances")
+                    percent = setresistancevalue(10 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances"))
                 },
                 {
                     type = "explosion",
                     decrease = 2 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances"),
-                    percent = 10 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances")
+                    percent = setresistancevalue(10 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances"))
                 },
                 {
                     type = "fire",
                     decrease = 2 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances"),
-                    percent = 10 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances")
+                    percent = setresistancevalue(10 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances"))
                 },
                 {
                     type = "laser",
                     decrease = 2 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances"),
-                    percent = 10 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances")
+                    percent = setresistancevalue(10 * setting_utils.getPositivePercentageOf("ab-small-armoured-biter-resistances"))
                 }
             },
             healing_per_tick = 0,
@@ -224,22 +228,22 @@ data:extend(
                 {
                     type = "physical",
                     decrease = 4 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances"),
-                    percent = 20 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances")
+                    percent = setresistancevalue(20 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances"))
                 },
                 {
                     type = "explosion",
                     decrease = 1 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances"),
-                    percent = 10 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances")
+                    percent = setresistancevalue(10 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances"))
                 },
                 {
                     type = "fire",
                     decrease = 1 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances"),
-                    percent = 10 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances")
+                    percent = setresistancevalue(10 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances"))
                 },
                 {
                     type = "laser",
                     decrease = 4 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances"),
-                    percent = 10 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances")
+                    percent = setresistancevalue(10 * setting_utils.getPositivePercentageOf("ab-medium-armoured-biter-resistances"))
                 }
             },
             healing_per_tick = 0,
@@ -349,22 +353,22 @@ data:extend(
                 {
                     type = "physical",
                     decrease = 8 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"),
-                    percent = 20 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances")
+                    percent = setresistancevalue(20 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"))
                 },
                 {
                     type = "explosion",
                     decrease = 3 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"),
-                    percent = 15 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances")
+                    percent = setresistancevalue(15 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"))
                 },
                 {
                     type = "fire",
                     decrease = 2 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"),
-                    percent = 20 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances")
+                    percent = setresistancevalue(20 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"))
                 },
                 {
                     type = "laser",
                     decrease = 6 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"),
-                    percent = 20 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances")
+                    percent = setresistancevalue(20 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"))
                 }
             },
             spawning_time_modifier = 3,
@@ -476,22 +480,22 @@ data:extend(
                 {
                     type = "physical",
                     decrease = 12 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"),
-                    percent = 25 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances")
+                    percent = setresistancevalue(25 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
                 },
                 {
                     type = "explosion",
                     decrease = 12 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"),
-                    percent = 25 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances")
+                    percent = setresistancevalue(25 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
                 },
                 {
                     type = "fire",
                     decrease = 4 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"),
-                    percent = 40 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances")
+                    percent = setresistancevalue(40 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
                 },
                 {
                     type = "laser",
                     decrease = 10 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"),
-                    percent = 20 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances")
+                    percent = setresistancevalue(20 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
                 }
             },
             spawning_time_modifier = 12,
@@ -680,27 +684,27 @@ local leviathan_resists = {
     {
         type = "physical",
         decrease = 12 * res_mp,
-        percent = 25 * res_mp
+        percent = setresistancevalue(25 * res_mp)
     },
     {
         type = "explosion",
         decrease = 12 * res_mp,
-        percent = 25 * res_mp
+        percent = setresistancevalue(25 * res_mp)
     },
     {
         type = "laser",
         decrease = 10 * res_mp,
-        percent = 20 * res_mp
+        percent = setresistancevalue(20 * res_mp)
     },
     {
         type = "impact",
         decrease = 20 * res_mp,
-        percent = 40 * res_mp
+        percent = setresistancevalue(40 * res_mp)
     },
     {
         type = "fire",
         decrease = 4 * res_mp,
-        percent = 40 * res_mp
+        percent = setresistancevalue(40 * res_mp)
     }
 }
 
