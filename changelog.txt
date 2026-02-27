@@ -1,15 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2026-02-28
+  General:
+    - Added Russian translation (thanks to Ifry)
+  Bugs:
+    - Fixed Snappers not using the correct unit settings, should improve performance in saves with lots of enemies (thanks to Nephyrin)
+    - Fixed longstanding issue with high resistance values making the biters invulnerable (big thanks to VextexFux)
+    - Fixed Snapper nests not being able to be captured with the Capture Bot Rocket (thanks to Sgamez)
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 2024-11-13
   General:
-      - Removed old high-res / low-res sprites now that Factorio does the scaling automatically (only high res now)
-      - Fixed various superfluous prototype properties that were removed or changed in Factorio 2.0
-      - Re-enabled moisture check (thanks to MFerrari!)
-      - Lowered corpse lifetime to ~5 minutes (suggested by Seldion)
+    - Removed old high-res / low-res sprites now that Factorio does the scaling automatically (only high res now)
+    - Fixed various superfluous prototype properties that were removed or changed in Factorio 2.0
+    - Re-enabled moisture check (thanks to MFerrari!)
+    - Lowered corpse lifetime to ~5 minutes (suggested by Seldion)
   Balancing:
-      - Changed how much pollution the Snappers require to attack (suggested by Buffalo_Soldier). They now require 150% more pollution to join an attack compared to a normal biter
+    - Changed how much pollution the Snappers require to attack (suggested by Buffalo_Soldier). They now require 50% more pollution to join an attack compared to a normal biter
   Bugs:
-      - Fixed incompatability with Creative Mod due to entity icon size, 32px vs 64px
+    - Fixed incompatability with Creative Mod due to entity icon size, 32px vs 64px
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2024-10-24
