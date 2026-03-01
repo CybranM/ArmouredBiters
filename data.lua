@@ -1043,6 +1043,11 @@ if settings.startup["ab-enable-nest"].value then
     )
     data.raw["unit-spawner"]["armoured-biter-spawner"].integration =
         data.raw["unit-spawner"]["biter-spawner"].integration
+        
+    if mods["space-age"] then
+        table.insert(data.raw.ammo["capture-robot-rocket"].ammo_type.target_filter, "armoured-biter-spawner")
+        data.raw["unit-spawner"]["armoured-biter-spawner"].captured_spawner_entity = "captive-biter-spawner"
+    end
 else
     if biterSpawner then
         local s_r = setting_utils.getPositivePercentageOf("ab-small-armoured-biter-spawn-probability")
@@ -1123,9 +1128,4 @@ else
             }
         end
     end
-end
-
-if mods["space-age"] then
-    table.insert(data.raw.ammo["capture-robot-rocket"].ammo_type.target_filter, "armoured-biter-spawner")
-    data.raw["unit-spawner"]["armoured-biter-spawner"].captured_spawner_entity = "captive-biter-spawner"
 end

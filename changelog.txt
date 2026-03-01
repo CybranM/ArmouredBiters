@@ -1,28 +1,35 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2026-03-01
+  Changes:
+    - Tweaked changelog to better follow Factorio categories
+  Bugfixes:
+    - Fixed error message when loading the mod with "Snapper Nest" turned off
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 2026-02-28
-  General:
+  Translation:
     - Added Russian translation (thanks to Ifry)
-  Bugs:
+  Bugfixes:
     - Fixed Snappers not using the correct unit settings, should improve performance in saves with lots of enemies (thanks to Nephyrin)
     - Fixed longstanding issue with high resistance values making the biters invulnerable (big thanks to VextexFux)
     - Fixed Snapper nests not being able to be captured with the Capture Bot Rocket (thanks to Sgamez)
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 2024-11-13
-  General:
+  Changes:
     - Removed old high-res / low-res sprites now that Factorio does the scaling automatically (only high res now)
     - Fixed various superfluous prototype properties that were removed or changed in Factorio 2.0
     - Re-enabled moisture check (thanks to MFerrari!)
     - Lowered corpse lifetime to ~5 minutes (suggested by Seldion)
   Balancing:
     - Changed how much pollution the Snappers require to attack (suggested by Buffalo_Soldier). They now require 50% more pollution to join an attack compared to a normal biter
-  Bugs:
+  Bugfixes:
     - Fixed incompatability with Creative Mod due to entity icon size, 32px vs 64px
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2024-10-24
-  General:
+  Changes:
     - Updated mod to support Factorio 2.0
     - Changed nest spawning to be enabled by default (suggested by zinful)
     - Added new tweaked sprite for the Snapper nests (thanks to Tserup)
@@ -30,81 +37,81 @@ Date: 2024-10-24
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.9
 Date: 2023-07-09
-  General:
+  Changes:
     - Reworked "Disable moisture check" into "Enable moisture check" and adjusted description to be less confusing (suggested by retep998)
-  Bugs:
+  Bugfixes:
     - Fixed "Disable moisture check" accidentally replacing all biter nests with snapper nests (spotted and fixed by retep998)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.8
 Date: 2023-05-04
-  General:
+  Translation:
     - Added French translation (thanks to Atomot)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 2023-05-02
-  General:
+  Changes:
     - Added colour settings to each snapper so you can set the to whatever colour you want! (suggested by zpro95)
-  Bugs:
+  Bugfixes:
     - Fixed Leviathan resistance showing "default value 75%" in tooltip when its supposed to be 100% (spotted by zpro95)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 2022-07-18
-  Bugs:
+  Bugfixes:
     - Fixed missing ground integration sprite (credit goes to PrestonLeeCole)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
 Date: 2022-02-27
-  General:
+  Changes:
     - Renamed "Armoured biter spawner" to "Snapper Nest" (suggested by conn11)
-  Bugs:
+  Bugfixes:
     - Fixed higher percentage HP settings not applying correctly (spotted by fgfg1360)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2021-03-14
-  Bugs:
+  Bugfixes:
     - Fixed a problem with mutiplayer mod settings sync
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 2021-03-06
-  Bugs:
+  Bugfixes:
     - Fixed crash on load depending on new mod options regarding the new nest
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2021-03-06
-  General:
+  Changes:
     - Huge credit to MFerrari for this update!
     - Added new leviathan armoured biter (you can disable it in settings by setting spawn probability to 0%)
     - Added small area damage to behemoth and leviathan units
     - Added separate spawner (requires you to enable the mod option)
     - Added feature for autoplacing the new nest, requiring minimal moisture on the surface (you can disable this in settings)
-  Bugs:
+  Bugfixes:
     - Fixed missing damaged_trigger_effect,walking_sound, running_sound_animation_positions values for all units
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2021-01-31
-  General:
+  Changes:
     - Added separate death animation function to help with compatability with other mods (credit goes to MrPlate)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 2020-11-30
-  General:
+  Changes:
     - Updated mod to Factorio 1.1
     - Added 500%, 700%, 1000% settings for biter health and resistances
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2020-09-09
-  General:
+  Changes:
     - Added 400% option to spawn-probability settings
     - Tweaked selection boxes a bit
   Balancing:
     - Further tweaked snapper resistances
       The base resistances are now more inline with regular biters but with increased % reduction
-  Bugs:
+  Bugfixes:
     - Fixed error in spawn-probability settings which didn't work as intended (problem spotted by garrotte)
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2020-08-16
-  General:
+  Changes:
     - Updated mod to Factorio 1.0
   Balancing:
     - Snapper health:
@@ -112,33 +119,33 @@ Date: 2020-08-16
       Behemoth: 5000 -> 6000
     - Heavily reduced medium snapper resistances, especially physical
     - Tweaked big and behemoth snapper resistances
-  Bugs:
+  Bugfixes:
     - Fixed a bug that drastically reduced small snapper spawning once pollution reached medium biter levels
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.3
 Date: 2020-05-30
-  General:
+  Changes:
     - Slightly reduced sprite size to better fit the new collision size as well as increase relative sprite resolution
-  Bugs:
+  Bugfixes:
     - Changed the biter collision size to fix AI issues with one-tile openings in defences (Spotted by Dragonling)
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.2
 Date: 2020-04-06
-  General:
+  Translation:
     - Added Polish translation (thanks to VrozaX)
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.1
 Date: 2020-02-10
-  General:
+  Changes:
     - Minor updates to the mod settings descriptions
     - Added a 25% option to the spawn rate setting
-  Bugs:
+  Bugfixes:
     - Typo in changelog.txt which made it impossible to see the changelog in-game (Spotted by Linver)
     - The initial "0.18 Armoured Biters" release was incorrectly set to compatible with 0.18.0 when it should've been 0.18.4
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.0
 Date: 2020-02-09
-  General:
+  Changes:
     - Compatability with Factorio version 0.18
     - Changed Big and Behemoth Snappers to use the biter_big sounds instead of regular
 ---------------------------------------------------------------------------------------------------
@@ -146,12 +153,12 @@ Version: 0.17.3
 Date: 2020-01-11
   Features:
     - Added options to configure snappers health, resistances and spawn rate (All thanks to Linver)
-  Bugs:
+  Bugfixes:
     - Snappers consumed too much pollution to spawn, this is now fixed (Spotted by JD-Plays)
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.2
 Date: 2019-12-18
-  General:
+  Changes:
     - Changed the in-game name from "Armoured biters" to "Snappers"
   Balancing:
     - Increased the speed of the snappers in order to better keep up with the regular biters
@@ -167,10 +174,10 @@ Date: 2019-12-18
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.1
 Date: 2019-12-16
-  Bugs:
+  Bugfixes:
     - Fixed naming error which caused the mod to fail to load
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.0
 Date: 2019-12-07
-  General:
+  Changes:
     - Initial release
