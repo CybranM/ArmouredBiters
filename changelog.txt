@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 2026-04-07
+  Balancing:
+    - Note that these numbers are affected by the scaling settings so might not show up exactly as listed here (even at 100% scaling)
+    - Added impact resistance to higher tier snappers (big 15% / behemoth 35% / leviathan 65%)
+    - Increased big laser resistance: 6/20% -> 6/30%
+    - Increased behemoth physical resistance: 12/25% -> 12/30%
+    - Increased behemoth explosion resistance: 12/25% -> 12/35%
+    - Increased behemoth laser resistance: 10/20% -> 13/40%
+    - Decreased behemoth fire resistance: 4/40% -> 4/35%
+    - Increased leviathan physical resistance: 12/25% -> 16/40%
+    - Increased leviathan explosion resistance: 12/25% -> 25/45%
+    - Increased leviathan laser resistance: 10/20% -> 16/60%
+    - Increased leviathan fire resistance: 4/40% -> 12/50%
+  Bugfixes:
+    - Fixed incorrect scaling when selecting 900% (spotted by pseudousia)
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2026-03-01
   Changes:

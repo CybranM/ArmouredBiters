@@ -368,7 +368,11 @@ data:extend(
                 {
                     type = "laser",
                     decrease = 6 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"),
-                    percent = setresistancevalue(20 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"))
+                    percent = setresistancevalue(30 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"))
+                },
+                {
+                    type = "impact",
+                    percent = setresistancevalue(15 * setting_utils.getPositivePercentageOf("ab-big-armoured-biter-resistances"))
                 }
             },
             spawning_time_modifier = 3,
@@ -480,22 +484,26 @@ data:extend(
                 {
                     type = "physical",
                     decrease = 12 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"),
-                    percent = setresistancevalue(25 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
+                    percent = setresistancevalue(30 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
                 },
                 {
                     type = "explosion",
                     decrease = 12 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"),
-                    percent = setresistancevalue(25 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
+                    percent = setresistancevalue(35 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
                 },
                 {
                     type = "fire",
                     decrease = 4 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"),
-                    percent = setresistancevalue(40 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
+                    percent = setresistancevalue(35 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
                 },
                 {
                     type = "laser",
-                    decrease = 10 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"),
-                    percent = setresistancevalue(20 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
+                    decrease = 13 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"),
+                    percent = setresistancevalue(40 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
+                },
+                {
+                    type = "impact",
+                    percent = setresistancevalue(35 * setting_utils.getPositivePercentageOf("ab-behemoth-armoured-biter-resistances"))
                 }
             },
             spawning_time_modifier = 12,
@@ -683,28 +691,27 @@ local res_mp = setting_utils.getPositivePercentageOf("ab-leviathan-armoured-bite
 local leviathan_resists = {
     {
         type = "physical",
-        decrease = 12 * res_mp,
-        percent = setresistancevalue(25 * res_mp)
+        decrease = 16 * res_mp,
+        percent = setresistancevalue(40 * res_mp)
     },
     {
         type = "explosion",
-        decrease = 12 * res_mp,
-        percent = setresistancevalue(25 * res_mp)
-    },
-    {
-        type = "laser",
-        decrease = 10 * res_mp,
-        percent = setresistancevalue(20 * res_mp)
-    },
-    {
-        type = "impact",
-        decrease = 20 * res_mp,
-        percent = setresistancevalue(40 * res_mp)
+        decrease = 25 * res_mp,
+        percent = setresistancevalue(45 * res_mp)
     },
     {
         type = "fire",
-        decrease = 4 * res_mp,
-        percent = setresistancevalue(40 * res_mp)
+        decrease = 12 * res_mp,
+        percent = setresistancevalue(50 * res_mp)
+    },
+    {
+        type = "laser",
+        decrease = 16 * res_mp,
+        percent = setresistancevalue(60 * res_mp)
+    },
+    {
+        type = "impact",
+        percent = setresistancevalue(65 * res_mp)
     }
 }
 
