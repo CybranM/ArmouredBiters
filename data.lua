@@ -2,8 +2,7 @@ require("animation")
 local setting_utils = require("setting-utils")
 local sounds = require("__base__.prototypes.entity.sounds")
 local ab_enemy_autoplace = require("armoured-autoplace")
-local enemy_autoplace = require("__base__.prototypes.entity.enemy-autoplace-utils")
-local biter_ai_settings = require("__base__.prototypes.entity.biter-ai-settings")
+local biter_ai_settings = data.raw["unit"]["small-biter"].ai_settings
 
 small_armoured_scale = 0.5
 small_armoured_tint1 = settings.startup["ab-small-armoured-biter-color-primary"].value
@@ -874,7 +873,7 @@ end
 local biterSpawner = data.raw["unit-spawner"]["biter-spawner"]
 
 if settings.startup["ab-enable-nest"].value then
-    
+
     ab_enemy_autoplace = Armoured_get_autoplace_base("0")
 
     local nest_tint = {
@@ -1050,7 +1049,7 @@ if settings.startup["ab-enable-nest"].value then
     )
     data.raw["unit-spawner"]["armoured-biter-spawner"].integration =
         data.raw["unit-spawner"]["biter-spawner"].integration
-        
+
     if mods["space-age"] then
         table.insert(data.raw.ammo["capture-robot-rocket"].ammo_type.target_filter, "armoured-biter-spawner")
         data.raw["unit-spawner"]["armoured-biter-spawner"].captured_spawner_entity = "captive-biter-spawner"
