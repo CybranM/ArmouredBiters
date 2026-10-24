@@ -4,7 +4,8 @@ local sounds = require("__base__.prototypes.entity.sounds")
 local ab_enemy_autoplace = require("armoured-autoplace")
 local enemy_autoplace = require("__base__.prototypes.entity.enemy-autoplace-utils")
 -- biter-ai-settings.lua was removed in 2.1
-local biter_ai_settings = {destroy_when_commands_fail = true, allow_try_return_to_spawner = true}
+local ai_settings_static = {destroy_when_commands_fail = true, allow_try_return_to_spawner = true}
+local use_group_scaling = settings.startup["ab-vanilla-group-scaling"].value
 local vanilla_tier_unit = {small = "small-biter", medium = "medium-biter", big = "big-biter", behemoth = "behemoth-biter"}
 
 -- Snapper nest only exists when ab-enable-nest is on, otherwise they build from vanilla's spawner
@@ -22,6 +23,24 @@ local function biter_buildable_entities(tier)
             return data.raw["unit"][vanilla_tier_unit[tier]].buildable_entities
         end
     end
+end
+
+-- vanilla 2.1 sets ai_settings.size_in_group by unit size
+local function biter_ai_settings(tier)
+    if not use_group_scaling then
+        return ai_settings_static
+    end
+    if tier == "leviathan" then
+        -- no vanilla leviathan, go one step past behemoth
+        local big_settings = data.raw["unit"]["big-biter"].ai_settings
+        local behemoth_settings = data.raw["unit"]["behemoth-biter"].ai_settings
+        return {
+            destroy_when_commands_fail = behemoth_settings.destroy_when_commands_fail,
+            allow_try_return_to_spawner = behemoth_settings.allow_try_return_to_spawner,
+            size_in_group = behemoth_settings.size_in_group + (behemoth_settings.size_in_group - big_settings.size_in_group)
+        }
+    end
+    return data.raw["unit"][vanilla_tier_unit[tier]].ai_settings
 end
 
 -- 2.1 replaced MapSettings::steering with a value on each unit
@@ -204,7 +223,7 @@ data:extend(
             working_sound = sounds.biter_calls(0.4),
             dying_sound = sounds.biter_dying(0.9),
             run_animation = armoredRunBiter(small_armoured_scale, small_armoured_tint1, small_armoured_tint2),
-            ai_settings = biter_ai_settings,
+            ai_settings = biter_ai_settings("small"),
             steering = biter_steering("small"),
             buildable_entities = biter_buildable_entities("small"),
             walking_sound = sounds.biter_walk_big(0.2),
@@ -331,7 +350,7 @@ data:extend(
             working_sound = sounds.biter_calls(0.4),
             dying_sound = sounds.biter_dying(0.9),
             run_animation = armoredRunBiter(medium_armoured_scale, medium_armoured_tint1, medium_armoured_tint2),
-            ai_settings = biter_ai_settings,
+            ai_settings = biter_ai_settings("medium"),
             steering = biter_steering("medium"),
             buildable_entities = biter_buildable_entities("medium"),
             walking_sound = sounds.biter_walk_big(0.4),
@@ -464,7 +483,7 @@ data:extend(
             working_sound = sounds.biter_calls_big(0.4),
             dying_sound = sounds.biter_dying_big(0.9),
             run_animation = armoredRunBiter(big_armoured_scale, big_armoured_tint1, big_armoured_tint2),
-            ai_settings = biter_ai_settings,
+            ai_settings = biter_ai_settings("big"),
             steering = biter_steering("big"),
             buildable_entities = biter_buildable_entities("big"),
             walking_sound = sounds.biter_walk_big(0.4),
@@ -620,7 +639,7 @@ data:extend(
             working_sound = sounds.biter_calls_big(0.4),
             dying_sound = sounds.biter_dying_big(0.9),
             run_animation = armoredRunBiter(behemoth_armoured_scale, behemoth_armoured_tint1, behemoth_armoured_tint2),
-            ai_settings = biter_ai_settings,
+            ai_settings = biter_ai_settings("behemoth"),
             steering = biter_steering("behemoth"),
             buildable_entities = biter_buildable_entities("behemoth"),
             walking_sound = sounds.biter_walk_big(0.5),
@@ -875,7 +894,7 @@ if l_r > 0 then
                 },
                 damaged_trigger_effect = table.deepcopy(data.raw["unit"]["behemoth-biter"].damaged_trigger_effect),
                 run_animation = armoredRunBiter(leviathan_scale, leviathan_tint1, leviathan_tint2),
-                ai_settings = biter_ai_settings,
+                ai_settings = biter_ai_settings("leviathan"),
                 steering = biter_steering("leviathan"),
                 buildable_entities = biter_buildable_entities("leviathan")
             },
@@ -1034,13 +1053,16 @@ if settings.startup["ab-enable-nest"].value then
                     360,
                     150
                 },
-                spawning_radius = 10,
-                spawning_spacing = 3,
+                spawning_radius = data.raw["unit-spawner"]["biter-spawner"].spawning_radius,
+                spawning_spacing = data.raw["unit-spawner"]["biter-spawner"].spawning_spacing,
                 max_spawn_shift = 0,
                 max_richness_for_spawn_shift = 100,
                 autoplace = ab_enemy_autoplace,
                 damaged_trigger_effect = table.deepcopy(
                     data.raw["unit-spawner"]["biter-spawner"].damaged_trigger_effect
+                ),
+                spawn_blocked_trigger = table.deepcopy(
+                    data.raw["unit-spawner"]["biter-spawner"].spawn_blocked_trigger
                 ),
                 call_for_help_radius = 50
             },

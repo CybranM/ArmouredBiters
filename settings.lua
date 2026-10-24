@@ -261,6 +261,14 @@ data:extend(
             default_value = false,
             order = "n",
             per_user = false
+        },
+        {
+            type = "bool-setting",
+            name = "ab-vanilla-group-scaling",
+            setting_type = "startup",
+            default_value = true,
+            order = "o",
+            per_user = false
         }
     }
 )
