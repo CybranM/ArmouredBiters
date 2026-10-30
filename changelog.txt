@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 2026-10-31
+  Changes:
+    - Snappers can now build their own nests when their species expands into new territory, matching vanilla 2.1 behavior (thanks to MFerrari)
+    - Added Milestones support (thanks to Deadpoolweid)
+  Balancing:
+    - Spawner's spawn radius and spacing now match vanilla's tighter 2.1 values
+    - Added an optional "Vanilla-style attack group scaling" startup setting, on by default
+  Bugfixes:
+    - Fixed the mod failing to load on Factorio 2.1
+---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 2026-04-07
   Balancing:
